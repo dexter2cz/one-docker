@@ -21,6 +21,8 @@ RUN buildDeps=' \
 	&& dpkg -i *.deb \
 	; apt-get install -fy --no-install-recommends \
 	&& gem install treetop parse-cron \
+	&& apt-get install -y --no-install-recommends openssh-server \
+	&& rm -fv /etc/ssh/ssh_host* \
 	&& apt-get clean \
 	&& rm -r /var/lib/apt/lists/* \
 	&& cd ../../ \

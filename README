@@ -1,0 +1,7 @@
+Frontend:
+docker run -it --name one --net=host -e FRONTEND=1 -e SLAVES=1 dexter2cz/one
+
+Nodes:
+mkdir -p /datastores
+chown 9869:9869 /datastores
+docker run -d --name one --privileged=true --net=host -e NODE=1 -e SSH_AUTH_KEY="ssh-ed25519 AAAA... oneadmin@oneadmin.cz" -v /var/lib/libvirt/:/var/lib/libvirt/ -v /var/run/dbus/:/var/run/dbus/ -v /datastores:/var/lib/one/datastores dexter2cz/one

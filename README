@@ -1,5 +1,5 @@
 Frontend:
-docker run -it --name one --net=host -e FRONTEND=1 -e SLAVES=1 dexter2cz/one
+docker run -it --name one --net=host -e FRONTEND=1 dexter2cz/one
 
 Nodes:
 mkdir -p /datastores

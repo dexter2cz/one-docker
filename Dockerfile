@@ -1,8 +1,8 @@
 FROM debian:jessie
 MAINTAINER Pavel Vondruska <dextor@centrum.cz>
 
-ENV VERSION 4.90.10
-ENV DEB_VERSION 4.90.10-1
+ENV VERSION 5.0.0
+ENV DEB_VERSION 5.0.0-1
 
 ENV ONE_URL http://downloads.opennebula.org/packages/opennebula-$VERSION/debian8/opennebula-$DEB_VERSION.tar.gz
 
